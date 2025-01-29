@@ -1,4 +1,4 @@
-public class BankAccount {
+class BankAccount {
     private String accountHolderName;
     private String accountNumber;
     private double balance;
@@ -9,37 +9,22 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public void deposit(double amount){
-        this.balance += amount;
-        System.out.println("Deposit successful." + "New balance: " + this.balance );
+    public void deposit(double amount) {
+        balance += amount;
+        System.out.println("Deposit successful. New balance: " + balance);
     }
 
-    public void Overloaded_deposit(double amount, String transactionNote){
-        this.balance += amount;
-        System.out.println("Overloaded deposit successful." + "New balance: " + this.balance );
+    public void deposit(double amount, String transactionNote) {
+        balance += amount;
+        System.out.println("Deposit successful. " + transactionNote + " New balance: " + balance);
     }
 
-    public void Withdraw(double amount){
-        this.balance -= amount;
-        if(this.balance >= amount){
-            System.out.println("Withdraw successful." + "New balance: " + this.balance );
+    public void withdraw(double amount) {
+        if (amount <= balance) {
+            balance -= amount;
+            System.out.println("Withdrawal successful. New balance: " + balance);
+        } else {
+            System.out.println("Insufficient funds.");
         }
-        else{
-            System.out.println("Insufficient funds" );
-        }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
