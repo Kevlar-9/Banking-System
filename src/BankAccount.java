@@ -1,7 +1,7 @@
 class BankAccount {
     private String accountHolderName;
     private String accountNumber;
-    private double balance;
+    double balance;
 
     public BankAccount(String accountHolderName, String accountNumber, double balance) {
         this.accountHolderName = accountHolderName;
@@ -26,5 +26,9 @@ class BankAccount {
         } else {
             System.out.println("Insufficient funds.");
         }
+    }
+
+    protected void displayAccountDetails() {
+
     }
 }
